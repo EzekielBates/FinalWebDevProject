@@ -1,9 +1,9 @@
 .items{
 
-    width:31%;
+    width:33.3%;
     height:600px;
     float:left;
-    padding:15px;
+
     background-color:lightgray;
 }
 
@@ -11,5 +11,8 @@
     text-align: center;
     margin:auto;
     width:80%;
+}
 
+.cart{
+    background-color:lightgray;
 }
