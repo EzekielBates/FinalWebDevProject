@@ -1,0 +1,30 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Movie Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script  defer src="app.js"></script>
+        <link  rel="stylesheet" type="text/css" media="screen" href="stylesheet.css"/>
+    </head>
+    <body>
+        <div id="ShoppingCart">
+            <div class="Items" v-for="item in Items">
+                <h1>{{item.name}}</h5>
+                <img v-bind:src=item.image>
+                <h5>{{item.desc}}</h5>
+                <h5 v-if="item.available > 0">Available: {{item.available}}</h5>
+                <h5 v-else="item.avaiable = 0">OUT OF STOCK</h5>
+                <h5>Price: {{item.price}}</h5>
+                <button v-on:click="item.addItem();calculateTotal();" v-if="item.available > 0">Add Item</button>
+            </div>
+            <p v-for="item in Items" v-if="item.inCart > 0">
+                Item:{{item.name}} Quantity: {{item.inCart}} Price: {{item.totalPrice}}
+                <button v-on:click="removeItem(item);calculateTotal();" >Remove Item</button> 
+            </p>
+            <div v-if="total > 0">Total Price: {{total}}</div>
+        </div>
+    </body>
+</html>

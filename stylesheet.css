@@ -1,0 +1,17 @@
+.items{
+
+    width:31%;
+    height:600px;
+    float:left;
+    padding:15px;
+    background-color:lightgray;
+}
+
+#shoppingCart {
+    text-align: center;
+    margin:auto;
+    border-style:solid;
+    border-color:black;
+    width:80%;
+
+}
