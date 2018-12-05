@@ -1,18 +1,22 @@
-.items{
-
-    width:33.3%;
+.Items{   
     height:600px;
-    float:left;
-
     background-color:lightgray;
+
 }
 
-#shoppingCart {
-    text-align: center;
+#ShoppingCart {   
     margin:auto;
     width:80%;
+    border-style:solid;
+    border-color:black;
+    text-align: center;
 }
 
 .cart{
     background-color:lightgray;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: auto auto auto;
 }
