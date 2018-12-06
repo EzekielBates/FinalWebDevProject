@@ -13,7 +13,7 @@
         <div id="ShoppingCart">
             <div class="grid">
                 <div class="Items" v-for="item in Items">
-                    <h1>{{item.name}}</h5>
+                    <h1>{{item.name}}</h1>
                     <img v-bind:src=item.image alt=item.name>
                     <h5>{{item.desc}}</h5>
                     <h5 v-if="item.available > 0">Available: {{item.available}}</h5>
@@ -23,10 +23,10 @@
                 </div>                
             </div>
             <div  class="cart" v-for="item in Items" v-if="item.inCart > 0">
-                Item:{{item.name}} Quantity:{{item.inCart}} Price:{{item.totalPrice}}
+                Item:{{item.name}} Price:{{item.price}} Quantity:{{item.inCart}} SubTotal:{{item.totalPrice}}
                 <button v-on:click="removeItem(item);calculateTotal();" >Remove Item</button>
             </div>
-            <div class="cart" v-if="total > 0">Total Price: {{total}}</div>
+            <div class="cart" v-if="total > 0">Total: {{total}}</div>
         </div>
     </body>
 </html>
